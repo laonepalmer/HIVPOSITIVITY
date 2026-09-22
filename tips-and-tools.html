@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adherence Tips &amp; Tools | HIVPositivity</title>
+    <meta
+      name="description"
+      content="Practical tips and tools to help you stay consistent with HIV treatment."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* -------------------- Adherence Tips & Tools page -------------------- */
+      .tools-page {
+        background: #fff;
+        --mint: #1c8a68;
+        --mint-soft: #dcf3ea;
+        --mint-line: #cdeee0;
+      }
+
+      .tools-hero {
+        background: linear-gradient(100deg, #fdf1e2 0%, #fdf6ea 55%, #fdf1e2 100%);
+      }
+      .tools-hero-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 40px;
+        align-items: center;
+        padding: 56px 0;
+      }
+      .tools-hero h1 {
+        font-size: clamp(2.1rem, 4vw, 2.9rem);
+        letter-spacing: -0.045em;
+        margin-bottom: 6px;
+      }
+      .tools-kicker {
+        font-family: var(--font-ui);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--navy);
+        margin: 0 0 14px;
+      }
+      .tools-hero-copy p:not(.tools-kicker) {
+        max-width: 480px;
+        color: #4b5468;
+        font-size: 1rem;
+      }
+      .tools-hero-art {
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      .tools-hero-art img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .tips-section {
+        padding: 46px 0 44px;
+      }
+      .tip-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .tip-card {
+        padding: 26px 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: 0 9px 22px rgba(23, 41, 66, 0.05);
+      }
+      .tip-icon {
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 16px;
+        border-radius: 14px;
+        background: var(--mint-soft);
+      }
+      .tip-icon svg {
+        width: 26px;
+        height: 26px;
+        stroke: var(--mint);
+      }
+      .tip-card.warning .tip-icon {
+        background: #fde3e3;
+      }
+      .tip-card.warning .tip-icon svg {
+        stroke: var(--red);
+        fill: var(--red);
+      }
+      .tip-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+      }
+      .tip-card p {
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .tools-help {
+        padding: 0 0 70px;
+      }
+      .tools-help .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        flex-wrap: wrap;
+        padding: 26px 32px;
+        border-radius: 16px;
+        background: var(--mint-soft);
+      }
+      .tools-help-left {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .tools-help-icon {
+        flex: 0 0 auto;
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--mint);
+        color: #fff;
+      }
+      .tools-help-icon svg {
+        width: 22px;
+        height: 22px;
+        stroke: #fff;
+        fill: none;
+      }
+      .tools-help h2 {
+        font-size: 1.15rem;
+        margin: 0 0 3px;
+      }
+      .tools-help p {
+        margin: 0;
+        font-size: 0.92rem;
+      }
+      .btn-mint {
+        background: var(--mint);
+        color: #fff;
+        box-shadow: 0 8px 18px rgba(28, 138, 104, 0.3);
+      }
+      .btn-mint:hover,
+      .btn-mint:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(28, 138, 104, 0.4);
+      }
+
+      @media (max-width: 860px) {
+        .tip-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 720px) {
+        .tools-hero-inner {
+          grid-template-columns: 1fr;
+          padding: 44px 0 36px;
+        }
+        .tools-hero-art {
+          order: -1;
+        }
+      }
+      @media (max-width: 480px) {
+        .tools-page .site-header .container {
+          height: 68px;
+        }
+        .tools-page .main-nav {
+          top: 68px;
+        }
+        .tip-grid {
+          grid-template-columns: 1fr;
+        }
+        .tools-hero h1 {
+          font-size: 1.9rem;
+        }
+        .tools-help .container {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 24px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body class="tools-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <svg
+            class="logo-mark"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path d="M17.2 3.3c-2.5 3.2-4 6.2-4.4 8.8L8.5 7.6 6.4 10l5.8 6.1c.1 1.7.7 3.4 1.8 5.1l2.1-2.1c-1.6-2.7-1.5-5.6.4-8.7 1.7 2.5 2.8 4.8 3.1 6.9.4 2.2-.3 4.4-2 6.8l2.4 2.2c2.5-3.2 3.5-6.3 3.1-9.4-.5-3.9-2.4-8.4-6.1-13.6Z" fill="#d83b4b"/>
+            <path d="m14.4 18.6-4.6 5.5 2.3 2 4.3-5.2" fill="#d83b4b"/>
+          </svg>
+          <span class="logo-text">
+            <span class="name">HIVPositivity</span>
+            <span class="tagline">Live well. Stay on track.</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="understanding-hiv.html">About HIV</a></li>
+            <li><a href="adherence.html">Adherence</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="tools-hero">
+        <div class="container tools-hero-inner">
+          <div class="tools-hero-copy">
+            <h1>Adherence Tips &amp; Tools</h1>
+            <p class="tools-kicker">Small steps. Big impact.</p>
+            <p>
+              Staying on track with your ARVs can be easier than you think.
+              Here are some practical tips and tools to help you build the
+              habit.
+            </p>
+          </div>
+          <div class="tools-hero-art">
+            <img
+              src="imgs/img6.png"
+              alt="A pill organiser, phone showing dose reminders, and a sticky note reading Same time. Every day."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="tips-section">
+        <div class="container">
+          <div class="tip-grid">
+            <article class="tip-card">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3.5" y="5" width="17" height="16" rx="2.5" />
+                  <path d="M3.5 9.5h17M8 3v3.5M16 3v3.5" />
+                </svg>
+              </span>
+              <h3>Build a Routine</h3>
+              <p>
+                Take your medication at the same time every day. Link it to a
+                daily activity (e.g., brushing your teeth).
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z" />
+                  <path d="M10.5 20a1.8 1.8 0 0 0 3 0" />
+                </svg>
+              </span>
+              <h3>Use Reminders</h3>
+              <p>
+                Set alarms, use a pill box or medication app. Keep it visible
+                (e.g., on your nightstand).
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3.3" />
+                  <path d="M12 3.5v2.4M12 18.1v2.4M20.5 12h-2.4M5.9 12H3.5M17.7 6.3l-1.7 1.7M8 16l-1.7 1.7M17.7 17.7 16 16M8 8 6.3 6.3" />
+                </svg>
+              </span>
+              <h3>Manage Side Effects</h3>
+              <p>
+                Mild side effects can happen at first. If they persist or get
+                worse, talk to your healthcare provider.
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="8.5" r="2.6" />
+                  <path d="M3.5 19c.6-3 2.7-4.7 5.5-4.7s4.9 1.7 5.5 4.7" />
+                  <circle cx="17" cy="9" r="2.1" />
+                  <path d="M15.5 14.6c2.4.2 4 1.8 4.5 4.4" />
+                </svg>
+              </span>
+              <h3>Get Support</h3>
+              <p>
+                Talk to a trusted friend, partner or support group. You're
+                not alone.
+              </p>
+            </article>
+
+            <article class="tip-card">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linejoin="round">
+                  <path d="M12 20.5S3.5 15.7 3.5 9.8C3.5 6.8 5.9 4.5 8.7 4.5c1.7 0 3.1.9 3.3 2.4.2-1.5 1.6-2.4 3.3-2.4 2.8 0 5.2 2.3 5.2 5.3 0 5.9-8.5 10.7-8.5 10.7Z" />
+                </svg>
+              </span>
+              <h3>Live a Healthy Lifestyle</h3>
+              <p>
+                Eat well, stay active, get enough rest, and manage stress.
+              </p>
+            </article>
+
+            <article class="tip-card warning">
+              <span class="tip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4 2.5 20h19L12 4Z" />
+                  <path d="M12 10v4.2" stroke-width="2" />
+                  <circle cx="12" cy="17" r="0.9" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <h3>Missed a Dose?</h3>
+              <p>
+                Take it as soon as you remember (unless it's almost time for
+                the next one). Do not double dose.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools-help">
+        <div class="container">
+          <div class="tools-help-left">
+            <span class="tools-help-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.3 4.5 9 6.4c.5.4.6 1.1.3 1.7L8 10.5a11.4 11.4 0 0 0 5.5 5.5l2.4-1.3c.6-.3 1.3-.2 1.7.3l1.9 2.7c.4.6.3 1.5-.3 2A5.5 5.5 0 0 1 15 21c-6.6 0-12-5.4-12-12a5.5 5.5 0 0 1 1.3-3.9c.5-.6 1.4-.7 2-.3Z" />
+              </svg>
+            </span>
+            <div>
+              <h2>Need more help?</h2>
+              <p>
+                Talk to your healthcare provider or contact the helpline for
+                personalised advice.
+              </p>
+            </div>
+          </div>
+          <a class="btn btn-mint" href="resources.html"
+            >Find Support <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">HIVPositivity</div>
+        <div class="footer-tagline">Live well. Stay on track.</div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="understanding-hiv.html">About HIV</a></li>
+            <li><a href="adherence.html">Adherence</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
