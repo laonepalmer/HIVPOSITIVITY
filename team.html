@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet the Team — HIVPositivity</title>
+    <meta
+      name="description"
+      content="Meet the students behind the HIVPositivity project."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .team-page {
+        background: #fff;
+      }
+      .team-hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: linear-gradient(
+          118deg,
+          #fff1ed 0%,
+          #fff8f4 50%,
+          #e9f8f4 100%
+        );
+      }
+      .team-hero::before,
+      .team-hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        z-index: 0;
+      }
+      .team-hero::before {
+        width: 46%;
+        height: 78%;
+        right: -8%;
+        bottom: -18%;
+        background: rgba(228, 172, 158, 0.28);
+      }
+      .team-hero::after {
+        width: 20%;
+        height: 20%;
+        left: 10%;
+        top: 10%;
+        background: rgba(156, 230, 210, 0.42);
+      }
+      .team-hero-inner {
+        position: relative;
+        z-index: 1;
+        padding: 72px 0 48px;
+        text-align: center;
+      }
+      .team-hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        letter-spacing: -0.06em;
+        margin-bottom: 14px;
+      }
+      .team-hero h1 span {
+        color: var(--red);
+      }
+      .team-hero p {
+        max-width: 560px;
+        margin: 0 auto;
+        color: #35435a;
+        font-size: 1.02rem;
+      }
+
+      .team-section {
+        padding: 20px 0 76px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+      }
+      .team-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        padding: 22px 20px 24px;
+        text-align: center;
+        box-shadow: 0 9px 25px rgba(23, 41, 66, 0.06);
+      }
+      .team-photo {
+        width: 132px;
+        height: 132px;
+        margin: 0 auto 16px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #e9edf3;
+      }
+      .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .team-card h3 {
+        font-size: 1.02rem;
+        margin-bottom: 4px;
+      }
+      .team-id {
+        font-family: var(--font-ui);
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--ink-soft);
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 900px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .team-hero-inner {
+          padding: 56px 0 34px;
+        }
+        .team-hero h1 {
+          font-size: 2.2rem;
+        }
+        .team-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .team-photo {
+          width: 92px;
+          height: 92px;
+        }
+        .team-page .site-header .container {
+          height: 68px;
+        }
+        .team-page .main-nav {
+          top: 68px;
+        }
+      }
+    </style>
+  </head>
+  <body class="team-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <svg
+            class="logo-mark"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M17.2 3.3c-2.5 3.2-4 6.2-4.4 8.8L8.5 7.6 6.4 10l5.8 6.1c.1 1.7.7 3.4 1.8 5.1l2.1-2.1c-1.6-2.7-1.5-5.6.4-8.7 1.7 2.5 2.8 4.8 3.1 6.9.4 2.2-.3 4.4-2 6.8l2.4 2.2c2.5-3.2 3.5-6.3 3.1-9.4-.5-3.9-2.4-8.4-6.1-13.6Z"
+              fill="#d83b4b"
+            />
+            <path d="m14.4 18.6-4.6 5.5 2.3 2 4.3-5.2" fill="#d83b4b" />
+          </svg>
+          <span class="logo-text">
+            <span class="name">HIVPositivity</span>
+            <span class="tagline">Live well. Stay on track.</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="understanding-hiv.html">About HIV</a></li>
+            <li><a href="adherence.html">Adherence</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="team.html" aria-current="page">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="team-hero">
+        <div class="container team-hero-inner">
+          <p class="eyebrow">Behind the project</p>
+          <h1>Meet the <span>Team</span></h1>
+          <p>
+            The students who researched, designed and built HIVPositivity as
+            part of their coursework.
+          </p>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <div class="container">
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Basante%20Shathani%20Mmereki%20202500652.jpeg"
+                  alt="Basante Shathani Mmereki"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Basante Shathani Mmereki</h3>
+              <p class="team-id">202500652</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Ednah%20Baone%20Ngwako%20202501840.jpeg"
+                  alt="Ednah Baone Ngwako"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Ednah Baone Ngwako</h3>
+              <p class="team-id">202501840</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Innocent%20Tsotlhe%20Odirile%20202503912.jpeg"
+                  alt="Innocent Tsotlhe Odirile"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Innocent Tsotlhe Odirile</h3>
+              <p class="team-id">202503912</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Tada%20Gaseitsiwe%20202602878.jpeg"
+                  alt="202602878"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Tada Gaseitsiwe</h3>
+              <p class="team-id">202602878</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Kopo%20Comfort%20Sankgopa%20202504312.jpeg"
+                  alt="Kopo Comfort Sankgopa"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Kopo Comfort Sankgopa</h3>
+              <p class="team-id">202504312</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Lashir%20Badumili%20202500563.jpeg"
+                  alt="Lashir Badumili"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Lashir Badumili</h3>
+              <p class="team-id">202500563</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Maatla%20Tefo%20Kwenaemang%20202501729.jpeg"
+                  alt="Maatla Tefo Kwenaemang"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Maatla Tefo Kwenaemang</h3>
+              <p class="team-id">202501729</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Otlaabusa%20Goitsemang%20202501943.jpeg"
+                  alt="Otlaabusa Goitsemang"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Otlaabusa Goitsemang</h3>
+              <p class="team-id">202501943</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Thabo%20Mangisi%20202501124.jpeg"
+                  alt="Thabo Mangisi"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Thabo Mangisi</h3>
+              <p class="team-id">202501124</p>
+            </div>
+
+            <div class="team-card">
+              <div class="team-photo">
+                <img
+                  src="imgs/Tshono%20Moreetsi%20202501923.jpeg"
+                  alt="Tshono Moreetsi"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Tshono Moreetsi</h3>
+              <p class="team-id">202501923</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">HIVPositivity</div>
+        <div class="footer-tagline">Live well. Stay on track.</div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="understanding-hiv.html">About HIV</a></li>
+            <li><a href="adherence.html">Adherence</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
